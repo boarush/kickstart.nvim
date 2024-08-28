@@ -836,6 +836,7 @@ require('lazy').setup({
       styles = {
         sidebars = 'transparent',
         floats = 'transparent',
+        keywords = { italic = false },
       },
     },
     init = function()
