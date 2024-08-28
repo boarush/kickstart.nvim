@@ -886,6 +886,13 @@ require('lazy').setup({
         return '%2l:%-2v'
       end
 
+      local statusline_section_mode = statusline.section_mode
+      ---@diagnostic disable-next-line: duplicate-set-field
+      statusline.section_mode = function(args)
+        local mode, mode_info_hl = statusline_section_mode(args)
+        return string.upper(mode), mode_info_hl
+      end
+
       -- ... and there is more!
       --  Check out: https://github.com/echasnovski/mini.nvim
     end,
